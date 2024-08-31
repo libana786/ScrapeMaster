@@ -5,7 +5,7 @@ services:
     build: .
     container_name: scrapemaster
     ports:
-      - "8000:8000"  # Map the container's port 8000 to your host's port 8000
+      - "8501:8501"  # Map the container's port 8000 to your host's port 8000
     volumes:
       - ./data:/app/data  # Optional: Bind mount for persistent storage
     environment:
