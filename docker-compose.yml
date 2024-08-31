@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  scrapemaster:
+    build: .
+    container_name: scrapemaster
+    ports:
+      - "8000:8000"  # Map the container's port 8000 to your host's port 8000
+    volumes:
+      - ./data:/app/data  # Optional: Bind mount for persistent storage
+    environment:
+      - DEBUG=false  # Set to true if you want to enable debug mode
+    restart: unless-stopped
