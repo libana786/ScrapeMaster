@@ -10,7 +10,8 @@ COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose the port that ScrapeMaster runs on
-EXPOSE 8000
+EXPOSE 8501
 
 # Command to run the application
-CMD ["python", "app.py"]
+CMD ["streamlit", "run", "streamlit_app.py"]
+
