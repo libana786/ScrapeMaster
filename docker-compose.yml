@@ -11,3 +11,4 @@ services:
     environment:
       - DEBUG=false  # Set to true if you want to enable debug mode
     restart: unless-stopped
+    pull_policy: build  # This line controls image rebuilding
